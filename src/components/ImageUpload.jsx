@@ -1,7 +1,16 @@
-import React from "react";
 import { Upload, Image as ImageIcon, Sparkles } from "lucide-react";
 
-export default function ImageUpload({ onImageSelect }) {
+export default function ImageUpload(props) {
+
+  const ShowImageHandler = (e) => {
+    const file = e.target.files[0]
+    // console.log(e.target.files[0]);
+    if (file) {
+      props.UploadImageHandler(file)
+    }
+
+  }
+
   return (
     <div className="w-full max-w-2xl mx-auto flex flex-col items-center gap-6 py-6">
 
@@ -32,11 +41,7 @@ export default function ImageUpload({ onImageSelect }) {
           type="file"
           accept="image/*"
           className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
-          onChange={(e) => {
-            if (e.target.files && e.target.files[0]) {
-              onImageSelect && onImageSelect(e.target.files[0]);
-            }
-          }}
+          onChange={ShowImageHandler}
         />
 
         {/* Upload Icon Container */}
