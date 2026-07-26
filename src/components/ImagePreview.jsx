@@ -13,11 +13,11 @@ export default function ImagePreview({
   enhancedImage,
   isProcessing,
   onReset,
-  onEnhanceHandler
+  onEnhance
 }) {
   return (
     <div className="w-full max-w-6xl mx-auto flex flex-col gap-6 py-2">
-      
+
       {/* Top Action Bar */}
       {uploadImage && (
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-white/80 dark:bg-[#0a120c]/80 border border-emerald-900/10 dark:border-emerald-500/20 p-4 rounded-2xl shadow-lg backdrop-blur-md">
@@ -37,7 +37,7 @@ export default function ImagePreview({
             </button>
 
             <button
-              onClick={onEnhanceHandler}
+              onClick={onEnhance}
               disabled={isProcessing}
               className="flex-1 sm:flex-none cursor-pointer inline-flex items-center justify-center gap-1.5 px-5 py-2 rounded-xl bg-emerald-600 text-white dark:bg-emerald-500 dark:text-emerald-950 text-xs font-bold hover:bg-emerald-700 dark:hover:bg-emerald-400 disabled:opacity-50 transition-all shadow-md shadow-emerald-600/20"
             >
@@ -59,7 +59,7 @@ export default function ImagePreview({
 
       {/* 2-Column Comparison Viewport */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
+
         {/* Column 1: Original Image */}
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-between px-1">
@@ -97,7 +97,7 @@ export default function ImagePreview({
           </div>
 
           <div className="relative w-full h-[380px] sm:h-[460px] bg-white/50 dark:bg-[#0a120c]/60 border border-emerald-900/10 dark:border-emerald-500/15 rounded-3xl overflow-hidden flex flex-col items-center justify-center p-4 shadow-sm">
-            
+
             {/* Loading Overlay */}
             {isProcessing && (
               <div className="absolute inset-0 bg-white/90 dark:bg-[#060c08]/90 backdrop-blur-md z-10 flex flex-col items-center justify-center gap-3">

@@ -59,7 +59,7 @@ export default function ImageUpload(props) {
       </div>
 
       {/* Preset bar */}
-      <div className="w-full flex items-center justify-between px-2 text-xs text-emerald-800/60 dark:text-emerald-300/60">
+      {/* <div className="w-full flex items-center justify-between px-2 text-xs text-emerald-800/60 dark:text-emerald-300/60">
         <span className="flex items-center gap-1.5">
           <ImageIcon className="w-3.5 h-3.5" />
           No image handy?
@@ -75,7 +75,7 @@ export default function ImageUpload(props) {
           <Sparkles className="w-3 h-3" />
           Try sample portrait image
         </button>
-      </div>
+      </div> */}
 
     </div>
   );
