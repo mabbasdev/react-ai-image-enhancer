@@ -1,16 +1,66 @@
-# React + Vite
+# EnhanceAI ReactJS Image Processing Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EnhanceAI is a sleek, modern web application that leverages advanced AI capabilities to upscale, restore, and refine image resolution in seconds. Built with a responsive obsidian-green design system, it provides a high-performance workspace for instant image enhancement.
 
-Currently, two official plugins are available:
+🚀 **[Live Demo](https://react-ai-image-enhancer-red.vercel.app/)** | 📦 **[GitHub Repository](https://github.com/mabbasdev/react-ai-image-enhancer)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **AI Image Upscaling**: Instantly enhance resolution and restore fine details using the PicWish AI model.
+- **Dynamic Theme System**: Custom-crafted **Greenish-Black Obsidian** dark mode and mint-tinted light mode.
+- **Interactive Dual-Preview**: Side-by-side comparative workspace with quick reset and direct 4K image downloads.
+- **Zero Backend Overhead**: Client-side API orchestration with real-time polling updates.
+- **Fully Responsive Layout**: Built with a mobile-first approach for seamless workflow across mobile, tablet, and desktop viewports.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack & Tools
+
+- **Frontend Library**: [React.js](https://react.dev/)
+- **Styling & Design System**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icon Suite**: [Lucide React](https://lucide.dev/)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **AI Processing Engine**: PicWish / TechHK Visual Scale API
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+## 📸 Usage Guide
+
+1. **Upload an Image**: Drag and drop your image file (`.png`, `.jpg`, `.webp`) into the dropzone or click to select from your device. Alternatively, click **"Try sample portrait image"**.
+2. **Trigger Enhancement**: Click **Enhance Image** to send the image payload to the AI scaling pipeline.
+3. **Download 4K Result**: Once processing completes, inspect the output in the comparative view and click **Download 4K**.
+
+---
+
+## ⚙️ Architecture Overview
+
+```text
+[ User Interface (React) ]
+          │
+          ├──> 1. Drag & Drop File Select (ImageUpload.jsx)
+          │
+          ├──> 2. Dispatch File Payload to API (enhancedImageAPI.js)
+          │            │
+          │            ├──> POST /api/tasks/visual/scale (Generates Task ID)
+          │            └──> Poll GET /api/tasks/visual/scale/{taskId}
+          │
+          └──> 3. Render Comparative Side-by-Side View (ImagePreview.jsx)
+
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/mabbasdev/react-ai-image-enhancer/issues).
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+### Built With ❤ By Muhammad Abbas
