@@ -6,6 +6,15 @@ EnhanceAI is a sleek, modern web application that leverages advanced AI capabili
 
 ---
 
+## 🖼️ Preview
+
+<p align="center">
+  <img src="preview_images/image-enhancer-1.png" alt="EnhanceAI Workspace - Light Mode" width="48%" />
+  <img src="preview_images/image-enhancer-2.png" alt="EnhanceAI Workspace - Dark Mode" width="48%" />
+</p>
+
+---
+
 ## ✨ Features
 
 - **AI Image Upscaling**: Instantly enhance resolution and restore fine details using the PicWish AI model.
