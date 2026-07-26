@@ -57,7 +57,7 @@ export default function ImagePreview({
         </div>
       )}
 
-      {/* 2-Column Comparison Viewport */}
+      {/* 2-Column Comparison */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         {/* Column 1: Original Image */}

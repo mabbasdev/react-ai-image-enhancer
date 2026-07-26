@@ -7,8 +7,8 @@ import { enhancedImageAPI } from "./utils/enhancedImageAPI";
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
-  const [uploadFile, setUploadFile] = useState(null); // Raw file for API call
-  const [uploadImage, setUploadImage] = useState(null); // Preview URL
+  const [uploadFile, setUploadFile] = useState(null);
+  const [uploadImage, setUploadImage] = useState(null);
   const [enhancedImage, setEnhancedImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
